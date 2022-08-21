@@ -26,7 +26,7 @@ namespace Aribilgi.BankApp.Web
             services.AddControllersWithViews();
             services.AddDbContext<BankContext>(opt =>
             {
-                opt.UseSqlServer("Server=MONSTER;Database=BankDb;Trusted_Connection=True;");
+                opt.UseSqlServer("Server=OZZ;Database=BankDb;Trusted_Connection=True;");
             });
         }
 
