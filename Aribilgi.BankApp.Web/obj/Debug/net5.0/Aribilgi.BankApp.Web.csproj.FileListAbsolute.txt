@@ -380,3 +380,4 @@ C:\Users\Ouz_x\Desktop\Projects\Aribilgi.BankApp.Web\Aribilgi.BankApp.Web\obj\De
 C:\Users\Ouz_x\Desktop\Projects\Aribilgi.BankApp.Web\Aribilgi.BankApp.Web\obj\Debug\net5.0\Aribilgi.BankApp.Web.genruntimeconfig.cache
 C:\Users\Ouz_x\Desktop\Projects\Aribilgi.BankApp.Web\Aribilgi.BankApp.Web\obj\Debug\net5.0\ref\Aribilgi.BankApp.Web.dll
 C:\Users\Ouz_x\Desktop\Projects\Aribilgi.BankApp.Web\Aribilgi.BankApp.Web\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\Ouz_x\Desktop\Projects\Aribilgi.BankApp.Web\Aribilgi.BankApp.Web\obj\Debug\net5.0\Razor\Views\Account\Index.cshtml.g.cs

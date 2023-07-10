@@ -1,20 +1,25 @@
 ﻿using Aribilgi.BankApp.Web.Data.Contexts;
+using Aribilgi.BankApp.Web.Data.Entities;
+using Aribilgi.BankApp.Web.Data.Interfaces;
+using Aribilgi.BankApp.Web.Data.Repository;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
 using System.Linq;
 
 namespace Aribilgi.BankApp.Web.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly BankContext _context;
-        public HomeController(BankContext context)
+        private readonly IRepository<ApplicationUser> _userRepo;
+
+        public HomeController(IRepository<ApplicationUser> userRepo)
         {
-            _context = context;
+            _userRepo = userRepo;
         }
 
         public IActionResult Index()
         {
-            return View(_context.ApplicationUsers.ToList());
+            return View(_userRepo.GetAll());
         }
     }
 }

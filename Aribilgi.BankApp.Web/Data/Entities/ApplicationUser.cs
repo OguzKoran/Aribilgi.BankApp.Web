@@ -8,6 +8,6 @@ namespace Aribilgi.BankApp.Web.Data.Entities
         public string Name { get; set; }
         public string Surname { get; set; }
 
-        public List<Account> Acoounts { get; set; }
+        public List<Account> Accounts { get; set; }
     }
 }

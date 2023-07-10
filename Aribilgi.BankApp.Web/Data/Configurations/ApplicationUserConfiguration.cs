@@ -11,7 +11,7 @@ namespace Aribilgi.BankApp.Web.Data.Configurations
             builder.Property(x => x.Name).IsRequired().HasMaxLength(200);
             builder.Property(x => x.Surname).IsRequired().HasMaxLength(250);
 
-            builder.HasMany(x => x.Acoounts).WithOne(x => x.ApplicationUser).HasForeignKey(x => x.ApplicationUserId);
+            builder.HasMany(x => x.Accounts).WithOne(x => x.ApplicationUser).HasForeignKey(x => x.ApplicationUserId);
 
         }
     }

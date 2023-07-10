@@ -1,12 +1,13 @@
 using Aribilgi.BankApp.Web.Data.Contexts;
+using Aribilgi.BankApp.Web.Data.Interfaces;
+using Aribilgi.BankApp.Web.Data.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Hosting.Server;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+
 
 namespace Aribilgi.BankApp.Web
 {
@@ -24,10 +25,10 @@ namespace Aribilgi.BankApp.Web
         {
             services.AddRazorPages();
             services.AddControllersWithViews();
-            services.AddDbContext<BankContext>(opt =>
-            {
-                opt.UseSqlServer("Server=OZZ;Database=BankDb;Trusted_Connection=True;");
-            });
+
+            services.AddDbContext<BankContext>(opt => { opt.UseSqlServer("Server=OZZ;Database=BankDB;Trusted_Connection=True;"); });
+
+            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
